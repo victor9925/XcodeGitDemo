@@ -14,6 +14,7 @@
 		57F318962A8C76F900600D0D /* github_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F318952A8C76F900600D0D /* github_1Tests.swift */; };
 		57F318A02A8C76F900600D0D /* github_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F3189F2A8C76F900600D0D /* github_1UITests.swift */; };
 		57F318A22A8C76F900600D0D /* github_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F318A12A8C76F900600D0D /* github_1UITestsLaunchTests.swift */; };
+		57F318B02A8C7FB700600D0D /* SecoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F318AF2A8C7FB700600D0D /* SecoundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		57F3189B2A8C76F900600D0D /* github_1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = github_1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F3189F2A8C76F900600D0D /* github_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_1UITests.swift; sourceTree = "<group>"; };
 		57F318A12A8C76F900600D0D /* github_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57F318AF2A8C7FB700600D0D /* SecoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				57F318842A8C76F400600D0D /* github_1App.swift */,
 				57F318862A8C76F400600D0D /* mainview.swift */,
+				57F318AF2A8C7FB700600D0D /* SecoundView.swift */,
 				57F318882A8C76F800600D0D /* Assets.xcassets */,
 				57F3188A2A8C76F800600D0D /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F318B02A8C7FB700600D0D /* SecoundView.swift in Sources */,
 				57F318872A8C76F400600D0D /* mainview.swift in Sources */,
 				57F318852A8C76F400600D0D /* github_1App.swift in Sources */,
 			);
