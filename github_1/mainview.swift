@@ -11,7 +11,7 @@ import SwiftUI
 
 
 
-struct ContentView: View {
+struct mainview: View {
     var body: some View {
         Text("First commit")
             .padding()
@@ -20,6 +20,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        mainview()
     }
 }
