@@ -13,8 +13,16 @@ import SwiftUI
 
 struct mainview: View {
     var body: some View {
-        Text("First commit")
-            .padding()
+        VStack {
+            Text("First commit")
+                .font(.title)
+                .foregroundColor(Color.green)
+            
+            Text("este es mi primer playground")
+
+            
+        }
+       
     }
 }
 
