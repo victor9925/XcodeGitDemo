@@ -11,22 +11,28 @@ struct imageview: View {
     var body: some View {
         VStack{
             HStack {
-                Image("brit").resizable()
-                    .scaledToFit()
-                    .frame(width: 50
-                       , height: 20).background(Color.gray).clipShape(Circle())
-                Spacer()
+                
+                
+                
                 Text("")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.brown)
-                    .frame(width: 200
+                    .frame(width: 400
                        , height: 20)
-                Spacer()
+              
                 
                 Image("brit").resizable()
                     .scaledToFit()
                     .frame(width: 50
                        , height: 20).background(Color.green).clipShape(Circle())
+                    .offset(x:-70)
+                
+                Image("brit").resizable()
+                    .scaledToFit()
+                    .frame(width: 50
+                       , height: 20).background(Color.gray).clipShape(Circle())
+                    .offset(x:-330)
+                
                 
             }.padding(.top,0)
             
