@@ -7,25 +7,29 @@
 
 import SwiftUI
 
-private let programmers = [Programmer(id:1,name: "Victor",language: "C,C++",image: Image(systemName: "person"),favorite: true),
-                        
+final class ProgrammersModelData:ObservableObject   {
+
+@Published var programmers = [Programmer(id:0,name: "Vic",language: "C--,C++",image: Image(systemName: "person"),favorite: true),Programmer(id:1,name: "Victor",language: "C,C++",image: Image(systemName: "person"),favorite: true),
+
                            Programmer(id:2,name: "BINI",language: "Java,C++",image: Image("brit"),favorite: false)
                            ,Programmer(id:3,name: "INI",language: "Java,C++",image: Image("brit"),favorite: true)
 ]
+}
 
 
 struct ListView: View {
     
+    @EnvironmentObject var prograersModelData:ProgrammersModelData
     @State private var showFavoritas = false
     
     private var filteredProgramers: [Programmer]{
-        return programmers.filter{programmer in
+        return prograersModelData.programmers.filter{programmer in
             return !showFavoritas || programmer.favorite
         }
     }
     var body: some View {
         
-        
+        NavigationView{
         VStack {
             Toggle(isOn: $showFavoritas) {
                 Text("Mostrar favoritos")
@@ -34,17 +38,16 @@ struct ListView: View {
                     .foregroundColor(Color.yellow)
             }.padding()
         
-            NavigationView{
-            List(filteredProgramers, id: \.id){
+                        List(filteredProgramers, id: \.id){
                 programmer in
-                NavigationLink(destination: listdetailView(programmer: programmer)){
+                NavigationLink(destination: listdetailView(programmer: programmer, favorite: $prograersModelData.programmers[programmer.id].favorite)){
                     RowUIView(programmer: programmer)
                 }
                 
             
             }
-            .navigationTitle("Programadores")
-            }
+           
+            }.navigationTitle("Programadores")
         }
         
         
@@ -54,6 +57,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        ListView().environmentObject(ProgrammersModelData())
     }
 }

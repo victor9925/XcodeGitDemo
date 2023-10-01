@@ -21,7 +21,7 @@ struct RowUIView: View {
                 Text(programmer.name)
                     .font(.title)
                     .fontWeight(.regular)
-                    .foregroundColor(Color.red)
+                    .foregroundColor(Color.blue)
                 Text(programmer.language)
                     .font(.callout)
                     .fontWeight(.light)
